@@ -34,10 +34,10 @@ class Student extends Person{
         console.log(this.favSubjects);
     }
     PRAssignment(subject){
-        console.log(`${student.name} has submitted a PR for ${subject}`)
+        console.log(`${this.name} has submitted a PR for ${subject}`)
     }
     sprintChallenge(subject){
-        `${student.name} has begun sprint challenge on ${subject}`
+        `${this.name} has begun sprint challenge on ${subject}`
     }
 }
 class ProjectManagers extends Instructor{
@@ -53,3 +53,18 @@ class ProjectManagers extends Instructor{
         console.log(`${this.name} debugs ${student.name}'s code on ${subject}`)
     }
 }
+//Objects
+const Ian = new Student({
+    name: 'Ian',
+    age: 12,
+    location: 'Sarasota',
+    previousBackground: 'Cook',
+    className: 'C4AB',
+    favSubjects: [
+        'Art',
+        'Science',
+        'Marine Biology',
+    ],
+});
+Ian.listsSubjects();
+Ian.PRAssignment('science');
